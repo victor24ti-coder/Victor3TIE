@@ -2,6 +2,7 @@ package com.example.victor3tie.pertemuan3
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.victor3tie.databinding.ActivityThirdBinding
 
@@ -10,7 +11,6 @@ class ThirdActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = ActivityThirdBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
