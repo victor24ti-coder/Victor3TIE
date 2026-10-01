@@ -3,12 +3,14 @@ package com.example.victor3tie
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.victor3tie.databinding.ActivityMainBinding
 import com.example.victor3tie.pertemuan4.FourthActivity
+import com.example.victor3tie.pertemuan5.FifthActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class MainActivity : AppCompatActivity() {
@@ -34,6 +36,11 @@ class MainActivity : AppCompatActivity() {
 
             startActivity(intent)
             finish()
+        }
+
+        binding.btnToFifth.setOnClickListener {
+            val intent = Intent(this, FifthActivity::class.java)
+            startActivity(intent)
         }
 
         binding.btnShowAlertDialog.setOnClickListener {
