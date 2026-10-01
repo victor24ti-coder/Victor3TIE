@@ -29,6 +29,7 @@ class WebViewActivity : AppCompatActivity() {
             title = "Web Merdeka"
             setDisplayHomeAsUpEnabled(true)
             setDisplayShowHomeEnabled(true)
+            setHomeAsUpIndicator(R.drawable.ic_arrow_back)
         }
 
         binding.webView.webViewClient = WebViewClient()
