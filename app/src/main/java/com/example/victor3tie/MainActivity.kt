@@ -11,6 +11,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.victor3tie.databinding.ActivityMainBinding
 import com.example.victor3tie.pertemuan4.FourthActivity
 import com.example.victor3tie.pertemuan5.FifthActivity
+import com.example.victor3tie.pertemuan6.AuthActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class MainActivity : AppCompatActivity() {
@@ -46,14 +47,15 @@ class MainActivity : AppCompatActivity() {
         binding.btnShowAlertDialog.setOnClickListener {
             MaterialAlertDialogBuilder(this)
                 .setTitle("Konfirmasi")
-                .setMessage("Apakah Anda yakin ingin melanjutkan?")
+                .setMessage("Apakah Anda yakin ingin logout?")
                 .setPositiveButton("Ya") { dialog, _ ->
-                    dialog.dismiss()
-                    Log.e("Info Dialog","Anda memilih Ya!")
+                    val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
+                    sharedPref.edit().clear().apply()
+                    startActivity(Intent(this, AuthActivity::class.java))
+                    finish()
                 }
                 .setNegativeButton("Batal") { dialog, _ ->
                     dialog.dismiss()
-                    Log.e("Info Dialog","Anda memilih Tidak!")
                 }
                 .show()
         }
