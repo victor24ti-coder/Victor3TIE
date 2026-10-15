@@ -44,6 +44,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.btnToSeventh.setOnClickListener {
+            val intent = Intent(this, com.example.victor3tie.pertemuan7.SevenActivity::class.java)
+            startActivity(intent)
+        }
+
         binding.btnShowAlertDialog.setOnClickListener {
             MaterialAlertDialogBuilder(this)
                 .setTitle("Konfirmasi")

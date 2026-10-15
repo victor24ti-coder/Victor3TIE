@@ -14,13 +14,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Victor3TIE">
         <activity
-            android:name=".pertemuan6.SplashScreenActivity"
+            android:name=".BaseActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".pertemuan6.SplashScreenActivity"
+            android:exported="false">
         </activity>
         <activity
             android:name=".pertemuan6.AuthActivity"
@@ -57,6 +60,10 @@
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".pertemuan5.WebViewActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".pertemuan7.SevenActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
     </application>
