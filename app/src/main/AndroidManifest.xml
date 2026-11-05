@@ -51,10 +51,6 @@
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".pertemuan5"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
             android:name=".pertemuan5.FifthActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
