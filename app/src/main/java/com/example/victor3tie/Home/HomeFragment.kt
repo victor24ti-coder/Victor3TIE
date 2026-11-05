@@ -12,7 +12,7 @@ import com.example.victor3tie.R
 import com.example.victor3tie.databinding.FragmentHomeBinding
 import com.example.victor3tie.pertemuan4.FourthActivity
 import com.example.victor3tie.pertemuan5.FifthActivity
-import com.example.victor3tie.pertemuan6.AuthActivity
+import com.example.victor3tie.Home.pertemuan9.NinthActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class HomeFragment : Fragment() {
@@ -55,6 +55,11 @@ class HomeFragment : Fragment() {
 
         binding.btnToSeventh.setOnClickListener {
             val intent = Intent(requireContext(), com.example.victor3tie.pertemuan7.SevenActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnToNinth.setOnClickListener {
+            val intent = Intent(requireContext(), NinthActivity::class.java)
             startActivity(intent)
         }
 
