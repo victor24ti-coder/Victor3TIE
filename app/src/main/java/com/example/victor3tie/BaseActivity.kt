@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import com.example.victor3tie.Home.HomeFragment
 import com.example.victor3tie.Message.MessageFragment
 import com.example.victor3tie.More.MoreFragment
+import com.example.victor3tie.Note.NoteFragment
 import com.example.victor3tie.databinding.ActivityBaseBinding
 
 class BaseActivity : AppCompatActivity() {
@@ -37,6 +38,10 @@ class BaseActivity : AppCompatActivity() {
                 }
                 R.id.more -> {
                     replaceFragment(MoreFragment())
+                    true
+                }
+                R.id.note -> {
+                    replaceFragment(NoteFragment())
                     true
                 }
                 else -> false // return false jika item tidak ada yang di klik
